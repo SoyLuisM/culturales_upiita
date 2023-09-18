@@ -1,6 +1,5 @@
 from django.db import models
 #from django.contrib.auth.models import AbstractUser
-from users.myAbstractUser import AbstractUser
 #from django.contrib
 import uuid
 
@@ -10,8 +9,9 @@ class User(AbstractUser):
     id_myuser = models.UUIDField(primary_key=True,default=uuid.uuid4())
     first_name = None
     last_name = None
-    
 
+
+    
 class TBL_USUARIOS(models.Model):
     id_tbl_usuario = models.UUIDField(primary_key=True,default=uuid.uuid4)
     nombre = models.CharField(max_length=100,blank=True)
